@@ -1,0 +1,16 @@
+# frame_folder: "/mnt/hdd/davidwong/data/trash_video"
+frame_folder: "/mnt/hdd/davidwong/data/trash_video/000035"
+is_sub_folder: False
+output_folder: "/mnt/hdd/davidwong/data/temp/output"
+fps: 30
+
+detection:
+    config_file: "/home/davidwong/documents/mmdetection/configs/dino/dino-5scale_swin-l_8xb2-36e_trash.py"
+    checkpoint_file: "/mnt/hdd/davidwong/models/trash_detector/epoch_100.pth"
+    device: "cuda:0"
+    target_classes: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+    score_threshold: 0.5
+
+segmentation:
+    config_file: "sam2_hiera_l.yaml"
+    checkpoint_file: "/home/davidwong/documents/segment-anything-2/checkpoints/sam2_hiera_large.pt"
